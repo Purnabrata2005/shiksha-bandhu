@@ -42,7 +42,7 @@ const Auth = () => {
 
         <View className="px-10">
           <Text className="text-base text-center uppercase font-rubik text-black-200">
-            Welcome To Real Scout
+            Welcome To Shiksha Bandhu
           </Text>
 
           <Text className="text-3xl font-rubik-bold text-black-300 text-center mt-2">
@@ -51,7 +51,7 @@ const Auth = () => {
           </Text>
 
           <Text className="text-lg font-rubik text-black-200 text-center mt-12">
-            Login to Real Scout with Google
+            Login to Shiksha Bandhu with Google
           </Text>
 
           <TouchableOpacity

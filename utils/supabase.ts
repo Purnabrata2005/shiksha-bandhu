@@ -38,6 +38,9 @@ export async function login() {
     // Create redirect URI
     const redirectUri = makeRedirectUri({ scheme: "shikshabandhu" });
     // Ask Supabase for the Google login URL
+    console.log("--- ADD THIS URL TO SUPABASE ---");
+    console.log(redirectUri);
+    console.log("---------------------------------");
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: { redirectTo: redirectUri },
