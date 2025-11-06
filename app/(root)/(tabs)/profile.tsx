@@ -1,3 +1,4 @@
+import { useToast } from "@/components/ui/toast";
 import { settings } from "@/constants/data";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
@@ -47,11 +48,16 @@ const SettingsItem = ({
 
 const Profile = () => {
   const { profile } = useAuth();
+  const { toast } = useToast();
 
   const handleLogout = async () => {
     const result = await logout();
     if (result) {
-      Alert.alert("Success", "Logged out successfully");
+      toast({
+        title: "Success!",
+        description: "Logged out successfully.",
+        variant: "success",
+      });
     } else {
       Alert.alert("Error", "Failed to logout");
     }

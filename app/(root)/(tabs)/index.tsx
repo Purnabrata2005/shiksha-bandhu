@@ -7,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const { profile } = useAuth();
+
   return (
     <SafeAreaView className="h-full bg-white">
       <View className="px-5">

@@ -9,15 +9,21 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useToast } from "@/components/ui/toast";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { login } from "@/utils/supabase";
 
 const Auth = () => {
+  const { toast } = useToast();
   const handleLogin = async () => {
     const result = await login();
     if (result) {
-      console.log("RESULT:", result);
+      toast({
+        title: "Success!",
+        description: "Login successful 🎉.",
+        variant: "success",
+      });
     } else {
       Alert.alert("Error", "Failed to login");
     }
